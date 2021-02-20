@@ -170,7 +170,7 @@ $ docker run \
 Let’s test that our application is connected to the database and is able to add a note.
 
 ```shell
-$ curl http://localhost:5000/initdb
+$ curl http://localhost:5000/db
 $ curl --request POST \
   --url http://localhost:5000/widgets \
   --header 'Content-Type: application/x-www-form-urlencoded' \
@@ -234,7 +234,7 @@ We pass the `--build` flag so Docker will compile our image and then starts the 
 Now let’s test our API endpoint. Run the following curl command:
 
 ```shell
-$ curl --request GET --url http://localhost:8080/widgets
+$ curl --request GET --url http://localhost:5000/widgets
 ```
 
 You should receive the following response:
